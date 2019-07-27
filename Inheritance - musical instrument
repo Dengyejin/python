@@ -1,0 +1,67 @@
+# 7、定义一个“曲调类”Note，value属性表示声音的高低
+# Note的三个子类分别表示高音、低音和中音
+# 定义一个“乐器类”Instrument
+# 具有play()方法
+# 子类：
+# “管乐器类”Wind
+# “敲击乐器类”Percussion
+# “弦乐器类”Singed
+# 只写一个方法传入乐器和音调实现：
+# 管乐器演奏中音
+# 弦乐器演奏高音
+# 敲击乐器演奏低音
+
+class Note:
+
+    def __init__(self,value):
+        self.value = value
+
+    def value(self,value):
+        return value
+
+class High(Note):
+
+    def __init__(self,value):
+        super().__init__()
+
+
+class Alto(Note):
+
+    def __init__(self,value):
+        super().__init__()
+
+class Bass(Note):
+
+    def __init__(self,value):
+        super().__init__()
+
+class Instrument(Note):
+    def __init__(self,name,value):
+        super().__init__(value)
+        self.name = name
+
+    def play(self):
+
+        print(self.name,'演奏',self.value)
+
+class Wind(Instrument):
+    def __init__(self):
+        super().__init__()
+
+
+class Percussion(Instrument):
+    def __init__(self):
+        super().__init__()
+
+class Singed(Instrument):
+    def __init__(self,):
+        super().__init__()
+
+instrument = Instrument('管乐器','中音')
+instrument.play()
+instrument1 = Instrument('弦乐器','高音')
+instrument1.play()
+instrument2 = Instrument('敲击乐器','低音')
+instrument2.play()
+
+
